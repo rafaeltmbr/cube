@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overscroll-behavior-y: contain;
 }
 
 body {
@@ -79,11 +80,9 @@ body {
 }
 
 .cube .face.n5 {
-  transform: translateX(var(--half-size-negative))
-    rotateY(var(--angle-negative));
+  transform: translateX(var(--half-size-negative)) rotateY(var(--angle-negative));
 }
 
 .cube .face.n6 {
-  transform: translateZ(var(--half-size-negative))
-    rotateY(calc(var(--angle) * 2));
+  transform: translateZ(var(--half-size-negative)) rotateY(calc(var(--angle) * 2));
 }
