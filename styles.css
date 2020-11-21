@@ -1,0 +1,89 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #474747;
+}
+
+.cube {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  transform-style: preserve-3d;
+  user-select: none;
+  cursor: grab;
+  transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+
+  --size: min(50vh, 50vw);
+  --color: tomato;
+  --opacity: 0.8;
+  --rotateX: 0deg;
+  --rotateY: 0deg;
+}
+
+.cube:active {
+  cursor: grabbing;
+}
+
+.cube * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cube .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: var(--opacity);
+  font-family: sans-serif;
+  font-size: calc(var(--size) * 0.5);
+  color: #ffffff;
+  transform-style: preserve-3d;
+  border: 1px solid #ffffff;
+
+  --half-size: calc(var(--size) / 2);
+  --half-size-negative: calc(var(--half-size) * -1);
+
+  --angle: 90deg;
+  --angle-negative: calc(var(--angle) * -1);
+}
+
+.cube .face.n1 {
+  transform: translateZ(var(--half-size));
+}
+
+.cube .face.n2 {
+  transform: translateX(var(--half-size)) rotateY(var(--angle));
+}
+
+.cube .face.n3 {
+  transform: translateY(var(--half-size-negative)) rotateX(var(--angle));
+}
+
+.cube .face.n4 {
+  transform: translateY(var(--half-size)) rotateX(var(--angle-negative));
+}
+
+.cube .face.n5 {
+  transform: translateX(var(--half-size-negative))
+    rotateY(var(--angle-negative));
+}
+
+.cube .face.n6 {
+  transform: translateZ(var(--half-size-negative))
+    rotateY(calc(var(--angle) * 2));
+}
