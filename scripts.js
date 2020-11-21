@@ -2,7 +2,7 @@ window.addEventListener('load', implementCubeMovement);
 
 function implementCubeMovement() {
   const cube = document.querySelector('.cube');
-  const lastOffset = { x: 0, y: 0 };
+  const lastOffset = { x: -42, y: 33 };
   const offset = {};
 
   function allowCubeMovement(startEvent) {

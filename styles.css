@@ -31,8 +31,8 @@ body {
   --size: min(50vh, 50vw);
   --color: tomato;
   --opacity: 0.8;
-  --rotateX: 0deg;
-  --rotateY: 0deg;
+  --rotateX: -33deg;
+  --rotateY: -42deg;
 }
 
 .cube:active {
