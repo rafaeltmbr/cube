@@ -5,6 +5,10 @@ body {
   overscroll-behavior-y: contain;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   position: fixed;
   height: 100%;
