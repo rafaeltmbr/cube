@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   overscroll-behavior-y: contain;
-  background-image: linear-gradient(to bottom, rgb(179, 224, 255), rgb(225, 247, 255));
+  background-image: linear-gradient(to bottom, rgb(206, 234, 253), rgb(233, 249, 255));
 }
 
 html {
@@ -29,7 +29,7 @@ body {
   transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
 
   --size: min(50vh, 50vw);
-  --opacity: 0.8;
+  --opacity: 0.9;
   --rotateX: -33deg;
   --rotateY: -42deg;
 }
@@ -68,27 +68,27 @@ body {
 
 .cube .face.n1 {
   transform: translateZ(var(--half-size));
-  background-color: #120078;
+  background-color: cornflowerblue;
 }
 
 .cube .face.n2 {
   transform: translateX(var(--half-size)) rotateY(var(--angle));
-  background-color: #16697a;
+  background-color: lightseagreen;
 }
 
 .cube .face.n3 {
   transform: translateY(var(--half-size-negative)) rotateX(var(--angle));
-  background-color: #a05344;
+  background-color: brown;
 }
 
 .cube .face.n4 {
   transform: translateY(var(--half-size)) rotateX(var(--angle-negative));
-  background-color: #5c6e91;
+  background-color: indigo;
 }
 
 .cube .face.n5 {
   transform: translateX(var(--half-size-negative)) rotateY(var(--angle-negative));
-  background-color: #9d0191;
+  background-color: mediumvioletred;
 }
 
 .cube .face.n6 {
