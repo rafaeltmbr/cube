@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   overscroll-behavior-y: contain;
+  background-image: linear-gradient(to bottom, rgb(179, 224, 255), rgb(225, 247, 255));
 }
 
 html {
@@ -16,7 +17,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #474747;
 }
 
 .cube {
@@ -29,7 +29,6 @@ body {
   transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
 
   --size: min(50vh, 50vw);
-  --color: tomato;
   --opacity: 0.8;
   --rotateX: -33deg;
   --rotateY: -42deg;
@@ -51,7 +50,6 @@ body {
   left: 0;
   width: var(--size);
   height: var(--size);
-  background-color: var(--color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +58,6 @@ body {
   font-size: calc(var(--size) * 0.5);
   color: #ffffff;
   transform-style: preserve-3d;
-  border: 1px solid #ffffff;
 
   --half-size: calc(var(--size) / 2);
   --half-size-negative: calc(var(--half-size) * -1);
@@ -71,24 +68,30 @@ body {
 
 .cube .face.n1 {
   transform: translateZ(var(--half-size));
+  background-color: #120078;
 }
 
 .cube .face.n2 {
   transform: translateX(var(--half-size)) rotateY(var(--angle));
+  background-color: #16697a;
 }
 
 .cube .face.n3 {
   transform: translateY(var(--half-size-negative)) rotateX(var(--angle));
+  background-color: #a05344;
 }
 
 .cube .face.n4 {
   transform: translateY(var(--half-size)) rotateX(var(--angle-negative));
+  background-color: #5c6e91;
 }
 
 .cube .face.n5 {
   transform: translateX(var(--half-size-negative)) rotateY(var(--angle-negative));
+  background-color: #9d0191;
 }
 
 .cube .face.n6 {
   transform: translateZ(var(--half-size-negative)) rotateY(calc(var(--angle) * 2));
+  background-color: tomato;
 }
